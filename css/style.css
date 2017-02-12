@@ -50,6 +50,9 @@ body {
 .jumbotron p {
   margin:0;
 }
+.logo img {
+  height:200px;
+}
 .btn:hover {
   background-color: #307428;
   border-color: #307428;
@@ -80,7 +83,7 @@ body {
 }
 
 .modal{
-  height: 402px;
+  height: 452px;
   display:block;
   position:relative;
   top:50%;
@@ -161,4 +164,18 @@ body {
 .content .btn-danger:hover {
   background-color: #b2403d;
   border-color: #b2403d;
+}
+@media (min-width: 1400px) {
+  .logo img {
+    height:300px;
+  }
+  .jumbotron .btn {
+    min-width: 300px;
+  }
+  .modal {
+    height: 552px;
+  }
+  .content {
+    padding-top: 120px;
+  }
 }
