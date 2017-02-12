@@ -109,7 +109,7 @@ body {
 
 .head{
   overflow:hidden;
-  background:#d9534f;
+  background:#3a8c30;
 }
 
 .btn-close{
@@ -161,9 +161,9 @@ body {
   background-color: #307428;
   border-color: #307428;
 }
-.content .btn-danger:hover {
+/*.content .btn-danger:hover {
   background-color: #b2403d;
-  border-color: #b2403d;
+  border-color: #b2403d;*/
 }
 @media (min-width: 1400px) {
   .logo img {
