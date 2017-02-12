@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="background blur"></div>
+        <div class="row">
+            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4 text-center greatings">
+                <div class="jumbotron">
+                    <div class="row">
+                        <button onclick="location.href='javascript:;'" class="btn btn-success btn-lg animated tada france">BIENVENUE</button>
+                    </div>
+                    <div class="row">
+                        <p><img src="./img/logo.png" height="150px" alt="Canabudz logo"></p>
+                    </div>
+                    <div class="row">
+                        <button onclick="location.href='javascript:;'" class="btn btn-success btn-lg animated tada english">WELCOME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper-france">
+        <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4 modal">
+            <div class="head">
+                <a class="btn-close text-center france" href="javascript:;"></a>
+            </div>
+            <div class="content text-center">
+              <h2>As-tu aumoins 18 ans?</h2>
+              <button class="btn btn-success btn-lg col-xs-4 col-xs-offset-1">OUI</button>
+              <button class="btn btn-danger btn-lg col-xs-4 col-xs-offset-2">NON</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper-english">
+        <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4 modal">
+            <div class="head">
+                <a class="btn-close text-center english" href="javascript:;"></a>
+            </div>
+            <div class="content text-center">
+              <h2>Are you at least 18 years old?</h2>
+              <button class="btn btn-success btn-lg col-xs-4 col-xs-offset-1">YES</button>
+              <button class="btn btn-danger btn-lg col-xs-4 col-xs-offset-2">NO</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.france').click(function() {
+                $('.modal-wrapper-france').toggleClass('open');
+                return false;
+            });
+            $('.english').click(function() {
+                $('.modal-wrapper-english').toggleClass('open');
+                return false;
+            });
+        });
+    </script>
 </body>
+
 </html>
