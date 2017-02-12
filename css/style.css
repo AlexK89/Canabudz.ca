@@ -1,5 +1,6 @@
 body {
   background: #205928;
+  font-family: "Ubuntu";
 }
 /*Background+blur
 ===========================*/
@@ -46,6 +47,10 @@ body {
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.4);
   background: #3a8c30;
   border-color: #3a8c30;
+  font-family: "Lobster";
+  letter-spacing: 2px;
+  font-weight: 100;
+  font-size: 2em;
 }
 .jumbotron p {
   margin:0;
@@ -83,7 +88,7 @@ body {
 }
 
 .modal{
-  height: 452px;
+  height: 478px;
   display:block;
   position:relative;
   top:50%;
@@ -150,9 +155,13 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+.content h1 {
+  font-weight: bold;
+}
 .content .btn {
   transition: 0.4s;
   margin-top: 120px;
+
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.4);
 }
 .content .btn-success {
@@ -163,10 +172,7 @@ body {
   background-color: #307428;
   border-color: #307428;
 }
-/*.content .btn-danger:hover {
-  background-color: #b2403d;
-  border-color: #b2403d;*/
-}
+
 @media (min-width: 1400px) {
   .logo img {
     height:300px;
@@ -175,9 +181,15 @@ body {
     min-width: 300px;
   }
   .modal {
-    height: 552px;
+    height: 616px;
   }
   .content {
     padding-top: 120px;
+  }
+  .jumbotron .btn {
+    font-size: 3em;
+  }
+  .content .btn {
+    font-size: 2em;
   }
 }
