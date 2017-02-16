@@ -1,18 +1,21 @@
+/*Background image*/
 .background {
     background: url('../img/bg3.jpg');
     width: 100vw;
     height: 100vh;
     background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     z-index: -1;
-    
+    -webkit-filter: blur(8px) brightness(1.1) contrast(120%);
+    -moz-filter: blur(8px) brightness(1.1) contrast(120%);
+    filter: blur(8px) brightness(1.1) contrast(120%);
 }
+
+/*Header and navbar*/
 .header {
-  padding: 15px;
-  background-color:rgba(255,255,255,0.9);
+  padding: 15px 0 15px 0;
+  background-color:rgba(255,255,255,0.85);
   text-align: center;
 }
 .header p,
@@ -20,9 +23,7 @@
   font-size: 4em;
   display: inline-block;
 }
-.header p {
 
-}
 .header h1 {
   height: 66px;
   padding-top: 10px;
@@ -38,28 +39,35 @@
   margin-bottom: 15px;
   padding: 15px;
   overflow: auto;
-  background: #3a8c30;
+  background: rgba(58, 140, 48, 0.95);
+  border: 0;
 }
+.collapsed {
 
-li {
-  list-style: none;
-  float: left;
-  margin-right: 15px;
 }
-li a {
-  color: #fff;
+.navbar-default .navbar-nav > li > a {
+  color:#fff;
+  text-align: center;
 }
-li a:hover, li a:focus {
-  color: #fff;
+.navbar {
+  border-radius: 0;
 }
-
+.navbar-default .navbar-toggle {
+  border-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background: #fff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background: #307428;
+}
 .fixed {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
-
 section {
   padding: 0 15px;
 }
