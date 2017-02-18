@@ -5,7 +5,7 @@
     background: url('../img/bg3.jpg');
     width: 100vw;
     height: 100vh;
-    background-size: cover;
+
     display: flex;
     position: fixed;
     z-index: -1;
@@ -23,29 +23,45 @@
     background-color: rgba(255, 255, 255, 0.85);
     text-align: center;
 }
-
-.header p, .header h1 {
-    font-size: 4em;
-    display: inline-block;
+.logo-container {
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: 28px;
 }
-
-.header h1 {
-    height: 66px;
-    padding-top: 10px;
-    line-height: 1em;
+.logo {
+  height: 87px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+    padding-top: 3px;
+}
+.logo h1 {
+    font-size: 3.5em;
     margin: 0;
-    vertical-align: middle;
 }
-
-.header h3 {
-    letter-spacing: 2px;
-    margin-top: 0;
+.logo img {
+  padding-bottom: 11px;
 }
+.logo-text {
+  height: 87px;
+  padding-left: 30px;
+  width: auto;
+  display: inline-block;
 
+  vertical-align: middle;
+}
+.logo-text p {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+}
+.logo-text p:last-child {
+  letter-spacing: 0.22em;
+  margin-right: -0.22em;
+}
 .sticky {
     padding: 0;
-    padding-left: 15px;
-    padding-right: 15px;
     overflow: auto;
     background: rgba(58, 140, 48, 0.95);
     border: 0;
@@ -57,7 +73,14 @@
     font-weight: bold;
     letter-spacing: 1px;
 }
-
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.nav > li > a {
+  padding-left: 14px;
+  padding-right: 14px;
+}
 .navbar-default .navbar-nav>li>a {
     height: 80px;
     padding-top: 30px;
@@ -80,12 +103,6 @@
 .navbar-default .navbar-nav>li>a:hover:active {
     background: rgba(255,255,255,0.9);
 }
-
-.navbar {
-    border-radius: 0;
-    margin-bottom: 0;
-}
-
 .navbar-default .navbar-toggle {
     border-color: #fff;
 }
