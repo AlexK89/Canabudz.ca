@@ -188,45 +188,46 @@
     <script src="./js/material.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         // sticky nav bar on scroll
-        jQuery(document).ready(function($) {
-            var $header = $('.header');
-            var $sticky = $('.sticky');
+        jQuery(function($) {
+            $(document).ready(function() {
+                var $header = $('.header');
+                var $sticky = $('.sticky');
 
-            $(window).scroll(function() {
-                if ($(window).scrollTop() >= $header.outerHeight()) {
-                    $sticky.addClass('fixed');
-                } else {
-                    $sticky.removeClass('fixed');
-                }
-            });
-            // Navigation bar
-            // =========================
-            $('a[href*="#"]:not([href="#"])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top - $('.navbar-header').height()
-                        }, 1000);
-                        console.log($('.navbar-header').height());
-                        return false;
+                $(window).scroll(function() {
+                    if ($(window).scrollTop() >= $header.outerHeight()) {
+                        $sticky.addClass('fixed');
+                    } else {
+                        $sticky.removeClass('fixed');
                     }
-                }
-            });
-            $('.nav a').on('click', function() {
-                if ($(window).width() < 768) {
-                    $('.navbar-toggle').click()
-                };
-            });
-            document.documentElement.addEventListener('touchstart', function(event) {
-                if (event.touches.length > 1) {
-                    event.preventDefault();
-                }
-            }, false);
-        }(jQuery));
+                });
+                // Navigation bar
+                // =========================
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top - $('.navbar-header').height()
+                            }, 1000);
+                            console.log($('.navbar-header').height());
+                            return false;
+                        }
+                    }
+                });
+                $('.nav a').on('click', function() {
+                    if ($(window).width() < 768) {
+                        $('.navbar-toggle').click()
+                    };
+                });
+                document.documentElement.addEventListener('touchstart', function(event) {
+                    if (event.touches.length > 1) {
+                        event.preventDefault();
+                    }
+                }, false);
+            });
+        });
         // scroll to anchor
         // ========================
         $('.scroll-to-anchor').click(function(e) {
@@ -240,8 +241,6 @@
 
             e.preventDefault();
         });
-
-
     </script>
 </body>
 
