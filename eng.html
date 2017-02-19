@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/material.min.css">
     <link rel="stylesheet" href="./css/eng.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Ubuntu:400,700" rel="stylesheet">
-    <title>CANBUDZ - Get high with us</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">    <title>CANBUDZ - Get high with us</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <header class="container-fluid header">
         <div class="logo-container">
             <div class="logo">
-                <h1><img src="./img/leaf.png" height="65px" alt="logo leaf">CANBUDZ</h1>
+                <h1><img src="./img/leaf.png" height="100px" alt="canbudz logo leaf">CANBUDZ</h1>
             </div>
             <div class="logo-text">
                 <p>MAKING CANADA</p>
@@ -37,7 +37,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="eng.html"><img src="./img/white-logo.png" height="50px" alt="logo white leaf"></a>
+                <a class="navbar-brand" href="eng.html"><img src="./img/white-logo.png" height="50px" alt="canbudz logo white leaf"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,7 +58,7 @@
     <div class="container-fluid content-section">
         <div class="row">
             <div class="about container">
-                <h1 class="col-xs-10 col-xs-offset-1">ABOUT</h1>
+                <h1  class="col-xs-10 col-xs-offset-1">ABOUT</h1>
                 <h3 class="col-xs-10 col-xs-offset-1">Mission</h3>
                 <p class="col-xs-10 col-xs-offset-1">CANBUDZ wants to help craft growers in Canada's soon-to-be-legal recreational weed market reach Canadian stoners from coast to coast, even if they lack Big Weed's deep pockets and marketing resources.</p>
                 <h3 class="col-xs-10 col-xs-offset-1">How It Will Work</h3>
@@ -74,13 +74,33 @@
         </div>
         <div class="row">
           <div class="ambassadors container">
-            <h1>AMBASSADORS</h1>
-            <p>Building a community takes people. But Canada's a huge country, so you guys are all over the place! This is why we need your help spreading the word accross these 9,984,670 square kilometers of ours.</p>
-            <p>We've got something really cool planned for this year's 4:20, but we need your help bringing it to your town or city's local ganja rally. And there's something in it for you we just won't be selling...</p>
-            <p>Be the first in your city to learn more:</p>
-            <p>Form with the fields: Name, E-mail, Phone (optional), City, Province (2 letters)- entries will supply the «Ambassadors-EN» mailing list</p>
-<blockquote class="twitter-tweet" data-lang="fr"><p lang="und" dir="ltr"><a href="https://t.co/uAhvqTYi0l">pic.twitter.com/uAhvqTYi0l</a></p>&mdash; Trippy Gifs (@TrippiestGif) <a href="https://twitter.com/TrippiestGif/status/822078186062315521">19 janvier 2017</a></blockquote>
-
+            <h1 class="col-xs-10 col-xs-offset-1">AMBASSADORS</h1>
+            <p class="col-xs-10 col-xs-offset-1">Building a community takes people. But Canada's a huge country, so you guys are all over the place! This is why we need your help spreading the word accross these 9,984,670 square kilometers of ours.</p>
+            <p class="col-xs-10 col-xs-offset-1">We've got something really cool planned for this year's 4:20, but we need your help bringing it to your town or city's local ganja rally. And there's something in it for you we just won't be selling...</p>
+            <h3 class="col-xs-10 col-xs-offset-1">Be the first in your city to learn more:</h3>
+            <form class="col-xs-12 col-md-6 col-md-offset-3" action="#">
+                <div class="col-xs-12 mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" required>
+                    <label class="mdl-textfield__label" for="sample3">Full Name*</label>
+                </div>
+                <div class="col-xs-12 form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="email" required>
+                    <label class="mdl-textfield__label" for="sample3">Your Email*</label>
+                </div>
+                <div class="col-xs-12 form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="tel">
+                    <label class="mdl-textfield__label" for="sample3">Phone Number</label>
+                </div>
+                <div class="col-xs-12 form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="email">
+                    <label class="mdl-textfield__label" for="sample3">City</label>
+                </div>
+                <div class="col-xs-12 form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="email">
+                    <label class="mdl-textfield__label" for="sample3">Province</label>
+                </div>
+                <button onclick="location.href='#'" id="submit-button">Submit</button>
+            </form>
           </div>
         </div>
     </div>
@@ -88,6 +108,7 @@
 
     <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="./js/material.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         // sticky nav bar on scroll
         $(window).scroll(function() {
