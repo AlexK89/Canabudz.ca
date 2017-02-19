@@ -97,7 +97,7 @@ body {
     top:15px;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
 }
 
 .sticky li {
@@ -292,8 +292,13 @@ form button:hover {
 .action {
   margin-top: 90px;
 }
-.forum-message h2 {
+.gear {
   text-align: center;
+}
+.forum-message h3,
+.trippy h3 {
+  text-align: center;
+  font-weight: bold;
 }
 .forum-buttons {
     margin-top: 40px;

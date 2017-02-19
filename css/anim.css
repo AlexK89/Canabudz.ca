@@ -224,7 +224,7 @@
 }
 .tractor .body .wheel {
   position: absolute;
-  z-index: 50;
+  z-index: 3;
   bottom: -15px;
   background: #fff;
   -moz-border-radius: 100%;
