@@ -39,14 +39,20 @@ body {
   display: inline-block;
   vertical-align: middle;
   padding-top: 3px;
-  color: #307428;
+  color: #3a8c30;
 }
 .logo h1 {
     font-size: 3.5em;
     margin: 0;
 }
+.logo a {
+  text-decoration: none;
+  color: #3a8c30;
+  cursor: pointer;
+}
 .logo img {
   padding-bottom: 11px;
+  height: 100px;
 }
 .logo-text {
   height: 100px;
@@ -55,7 +61,7 @@ body {
   width: auto;
   display: inline-block;
   vertical-align: middle;
-  color: #307428;
+  color: #3a8c30;
 }
 .logo-text p {
     margin: 0;
@@ -69,7 +75,7 @@ body {
 .sticky {
     padding: 0;
     overflow: auto;
-    background: rgba(58, 140, 48, 1);
+    background: #3a8c30;
     border: 0;
     z-index: 2;
 }
@@ -102,11 +108,11 @@ body {
 }
 .navbar-default .navbar-nav>li>a:hover {
     background: rgba(255,255,255,0.9);
-    color: #307428;
+    color: #3a8c30;
     transition: 0.4s;
 }
 .navbar-default .navbar-nav>li>a:hover:focus {
-    color: #307428;
+    color: #3a8c30;
 }
 .navbar-default .navbar-nav>li>a:hover:active {
     background: rgba(255,255,255,0.9);
@@ -120,7 +126,7 @@ body {
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background: #307428;
+    background: #3a8c30;
 }
 
 .fixed {
@@ -141,25 +147,32 @@ body {
 /*ABOUT
 ===============================*/
 .about,
-.ambassadors {
+.ambassadors,
+.forum,
+.growers-b2b,
+.trippy {
   background: rgba(255,255,255,0.9);
   text-align: justify;
   padding-top: 40px;
   padding-bottom: 64px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), 0px 2px 6px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
 }
 .about h1,
 .about h3,
 .about h4,
 .ambassadors h1,
 .ambassadors h3,
-.ambassadors h4 {
+.forum h1,
+.trippy h1 {
   text-align: center;
   font-weight: bold;
-  color: #307428;
+  color: #3a8c30;
 }
 .about h1,
-.ambassadors h1 {
+.ambassadors h1,
+.forum h1,
+.trippy h1 {
   border-bottom: 1px solid rgba(200,200,200,0.6);
 }
 .about h4 {
@@ -173,7 +186,8 @@ body {
   color: #307428;
 }
 .about p,
-.ambassadors p {
+.ambassadors p,
+.forum p {
   font-size: 1.7em;
   line-height: 2em;
   letter-spacing: 1px;
@@ -181,8 +195,10 @@ body {
 }
 /*ambassadors
 ===============================*/
-.ambassadors {
-  margin-top: 40px;
+.ambassadors,
+.forum,
+.trippy {
+  margin-top: 20px;
 }
 
 .mdl-textfield {
@@ -194,17 +210,17 @@ body {
 }
 
 .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-    color: #307428;
+    color: #3a8c30;
     font-size: 16px;
 }
 
 .mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
-    color: #307428;
+    color: #3a8c30;
     font-size: 16px;
 }
 
 .mdl-textfield__label:after {
-    background-color: #307428;
+    background-color: #3a8c30;
 }
 
 .mdl-textfield.is-invalid .mdl-textfield__input {
@@ -212,7 +228,7 @@ body {
 }
 
 .mdl-textfield.is-invalid .mdl-textfield__label:after {
-    background-color: #307428;
+    background-color: #3a8c30;
 }
 form button {
   display: block;
@@ -220,7 +236,7 @@ form button {
   height: 60px;
   margin: auto;
   border: none;
-  background-color: #307428;
+  background-color: #3a8c30;
   color: #fff;
   font-size: 2em;
   letter-spacing: 3px;
@@ -230,13 +246,181 @@ form button {
 form button:hover {
   background-color: #3fa036;
 }
+/*FORUM
+===============================*/
+.forum-message {
+  border: 1px solid rgba(200,200,200,0.6);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.forum-message p{
+  letter-spacing: 1px;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.forum-buttons {
+  margin-top: 40px;
+  text-align: center;
+}
+.forum-buttons button {
+  width: 200px;
+  height: 60px;
+  background: #3a8c30;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 3px;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+.forum-buttons button:disabled {
+  background: #7a9178;
+  cursor: not-allowed;
+}
+.forum-buttons button:disabled:hover {
+  background: #7a9178;
+}
+.forum-buttons button:hover {
+  background-color: #3fa036;
+}
 
+/*Growers & B2B
+===============================*/
+.growers,
+.b2b {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.growers-b2b h2 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(200,200,200,0.2);
+  margin-bottom: 20px;
+}
+.growers-b2b p {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.4em;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.growers-b2b h3 {
+  font-weight: bold;
+  color: #3a8c30;
+  text-align: center;
+  letter-spacing: 0;
+}
+.growers-b2b h5 {
+  text-align: justify;
+  color: #3a8c30;
+  line-height: 1.3em;
+}
+.b2b-form {
+  margin-top: 50px;
+}
+.b2b-form form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/*Growers & B2B
+===============================*/
+.trippy h4 {
+  color: #3a8c30;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 170px;
+}
+
+/*FOOTER
+===============================*/
+.footer {
+  height: 200px;
+  background-color: #3a8c30;
+  margin-top: 50px;
+}
+.footer h1 {
+  font-size: 2em;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: center;
+}
+/*Media query
+===============================*/
 @media (min-width:768px) {
   .content-section {
     margin-top: 40px;
   }
   .about,
-  .ambassadors {
+  .ambassadors,
+  .forum,
+  .growers-b2b,
+  .trippy {
     border-radius: 10px;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .about p,
+  .ambassadors p,
+  .forum p {
+    font-size: 1.3em;
+  }
+    .navbar-default .navbar-nav>li {
+      height: 50px;
+    }
+  .navbar-default .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    height: 50px;
+  }
+}
+@media (max-width:400px) {
+  h1 {
+    font-size: 1.7em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .about p,
+  .ambassadors p,
+  .forum p {
+    line-height: 1.6em;
+  }
+  .logo {
+    display: block;
+    width: 100%;
+    height: 50px;
+  }
+  .logo img {
+    height: 50px;
+  }
+  .logo h1 {
+    font-size: 2.6em;
+  }
+  .b2b-form h3 {
+    font-size: 1em;
+    width: 100%;
+    margin-left: 0;
+    line-height: 1.4em;
+  }
+  .b2b-form h5 {
+    margin-left: 0;
+    width: 100%;
+    font-size: 1em;
   }
 }
