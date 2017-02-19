@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/material.min.css">
     <link rel="stylesheet" href="./css/eng.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
-    <title>CANBUDZ - Get high with us</title>
+    <title>CANBUDZ - MAKING CANADA HIGH AGAIN SINCE 2018</title>
 </head>
 
 <body>
@@ -199,7 +199,33 @@
                     $sticky.removeClass('fixed');
                 }
             });
-        })(jQuery);
+            // Navigation bar
+            // =========================
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - $('.navbar-header').height()
+                        }, 1000);
+                        console.log($('.navbar-header').height());
+                        return false;
+                    }
+                }
+            });
+            $('.nav a').on('click', function() {
+                if ($(window).width() < 768) {
+                    $('.navbar-toggle').click()
+                };
+            });
+            document.documentElement.addEventListener('touchstart', function(event) {
+                if (event.touches.length > 1) {
+                    event.preventDefault();
+                }
+            }, false);
+        }(jQuery));
 
         // scroll to anchor
         // ========================
@@ -215,31 +241,7 @@
             e.preventDefault();
         });
 
-        // Navigation bar
-        // =========================
-        $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 60
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-        $('.nav a').on('click', function() {
-            if ($(window).width() < 768) {
-                $('.navbar-toggle').click()
-            };
-        });
-        document.documentElement.addEventListener('touchstart', function(event) {
-            if (event.touches.length > 1) {
-                event.preventDefault();
-            }
-        }, false);
     </script>
 </body>
 
