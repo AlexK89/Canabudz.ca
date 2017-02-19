@@ -43,13 +43,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#" class="button-nice btn-5">About</a></li>
-                    <li><a href="#" class="button-nice btn-5">Ambassadors</a></li>
-                    <li><a href="#" class="button-nice btn-5">Forum</a></li>
-                    <li><a href="#" class="button-nice btn-5">For Growers</a></li>
-                    <li><a href="#" class="button-nice btn-5">B2B</a></li>
-                    <li><a href="#" class="button-nice btn-5">Trippy Shit</a></li>
-                    <li><a href="#" class="button-nice btn-5">Contact</a></li>
+                    <li><a href="#about-section" class="button-nice btn-5">About</a></li>
+                    <li><a href="#ambassadors-section" class="button-nice btn-5">Ambassadors</a></li>
+                    <li><a href="#forum-section" class="button-nice btn-5">Forum</a></li>
+                    <li><a href="#growers-section" class="button-nice btn-5">For Growers</a></li>
+                    <li><a href="#growers-section" class="button-nice btn-5">B2B</a></li>
+                    <li><a href="#trippy-section" class="button-nice btn-5">Trippy Shit</a></li>
+                    <li><a href="#contact-section" class="button-nice btn-5">Contact</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -57,7 +57,7 @@
         <!-- /.container-fluid -->
     </nav>
     <div class="container-fluid content-section">
-        <div class="row">
+        <div class="row" id="about-section">
             <div class="about container">
                 <h1 class="col-xs-10 col-xs-offset-1">ABOUT</h1>
                 <h3 class="col-xs-10 col-xs-offset-1">Mission</h3>
@@ -75,7 +75,7 @@
                 <p class="col-xs-10 col-xs-offset-1">We hope the upcoming law will allow for a diverse and inclusive weed scene, and allow us to build CANBUDZ into a vibrant community where Canadians can trade and celebrate a wonderful plant humans have loved for thousands of years.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="ambassadors-section">
             <div class="ambassadors container">
                 <h1 class="col-xs-10 col-xs-offset-1">AMBASSADORS</h1>
                 <p class="col-xs-10 col-xs-offset-1">Building a community takes people. But Canada's a huge country, so you guys are all over the place! This is why we need your help spreading the word accross these 9,984,670 square kilometers of ours.</p>
@@ -106,7 +106,7 @@
                 </form>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="forum-section">
             <div class="forum container">
                 <h1 class="col-xs-10 col-xs-offset-1">FORUM</h1>
                 <div class="col-xs-10 col-xs-offset-1 forum-message">
@@ -127,7 +127,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="growers-section">
             <div class="container growers-b2b">
                 <div class="col-xs-12 col-sm-6">
                     <div class="growers">
@@ -169,14 +169,14 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="trippy-section">
             <div class="trippy container">
                 <h1 class="col-xs-10 col-xs-offset-1">TRIPPY SHIT</h1>
                 <h4>(Under Construction)</h4>
             </div>
         </div>
     </div>
-    <div class="footer conteiner-fluid">
+    <div class="footer conteiner-fluid" id="contact-section">
       <h1>Contacts</h1>
 
     </div>
@@ -234,9 +234,10 @@
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
                 if (target.length) {
                     $('html, body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - 60
                     }, 1000);
                     return false;
                 }
