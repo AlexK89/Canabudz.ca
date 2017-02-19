@@ -278,18 +278,23 @@ form button:hover {
 /*FORUM
 ===============================*/
 
-.forum-message {
+/*.forum-message {
     border: 1px solid rgba(200, 200, 200, 0.6);
     border-radius: 10px;
     margin-top: 20px;
-}
+}*/
 
-.forum-message p {
+/*.forum-message p {
     letter-spacing: 1px;
     font-size: 1.5em;
     line-height: 1.5em;
+}*/
+.action {
+  margin-top: 90px;
 }
-
+.forum-message h2 {
+  text-align: center;
+}
 .forum-buttons {
     margin-top: 40px;
     text-align: center;
@@ -382,9 +387,10 @@ form button:hover {
     color: #3a8c30;
     text-align: center;
     font-weight: bold;
-    margin-top: 170px;
 }
-
+.trippy h2 {
+  text-align: center;
+}
 
 /*FOOTER
 ===============================*/
@@ -414,6 +420,9 @@ form button:hover {
     .about, .ambassadors, .forum, .growers-b2b, .trippy {
         border-radius: 10px;
     }
+    .gear {
+      display: none;
+    }
 }
 
 @media (max-width: 767px) {
@@ -437,6 +446,9 @@ form button:hover {
         padding-bottom: 10px;
         font-size: 1.5em;
         height: 50px;
+    }
+    .action {
+      display: none;
     }
 }
 
