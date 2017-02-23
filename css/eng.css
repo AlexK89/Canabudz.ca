@@ -208,6 +208,7 @@ body {
 .about a {
     text-decoration: none;
     color: #3fa036;
+    font-weight: bold;
 }
 
 .about a:hover {
