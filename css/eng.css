@@ -271,7 +271,9 @@ form button {
 }
 
 form button:hover {
-    background-color: #3fa036;
+    background-color: #fff;
+    border: 1px solid #3a8c30;
+    color: #3a8c30;
 }
 
 
@@ -330,7 +332,9 @@ form button:hover {
 }
 
 .forum-buttons button:hover {
-    background-color: #3fa036;
+    background-color: #fff;
+    border: 1px solid #3a8c30;
+    color: #3a8c30;
 }
 
 
@@ -443,7 +447,7 @@ border-bottom: 1px solid rgba(255,255,255,.7);
 .footer form button {
     background-color: #fff;
     color: #3a8c30;
-    transition: 0.4s;
+    transition: .4s;
     margin-bottom: 40px;
 }
 
@@ -451,7 +455,6 @@ border-bottom: 1px solid rgba(255,255,255,.7);
     background-color: #3a8c30;
     border: 1px solid #fff;
     color: #fff;
-    transition: 0.4s;
 }
 .social {
   text-align: center;
@@ -466,7 +469,6 @@ border-bottom: 1px solid rgba(255,255,255,.7);
 .social button {
   margin-left: 20px;
   margin-right: 20px;
-  scale
 }
 .social button i {
   transition: .2s;
@@ -508,6 +510,10 @@ border-bottom: 1px solid rgba(255,255,255,.7);
         padding-bottom: 10px;
         font-size: 1.5em;
         height: 50px;
+    }
+    .social button {
+      margin-left: 10px;
+      margin-right: 10px;
     }
 }
 

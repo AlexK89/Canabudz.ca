@@ -264,8 +264,34 @@
             </article>
         </div>
     </div>
-    <div class="footer conteiner-fluid" id="contact-section">
-        <h1>Contacts</h1>
+    <div class="conteiner-fluid footer" id="contact-section">
+      <article class="container-fluid contact">
+          <div class="col-xs-12">
+              <div class="col-xs-12 contact-form">
+                  <h1 class="col-xs-10 col-xs-offset-1">Contact</h1>
+                  <form class="col-xs-12 col-md-6 col-md-offset-3" action="#">
+                      <div class="col-xs-12 mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" required>
+                          <label class="mdl-textfield__label" for="sample3">Nom*</label>
+                      </div>
+                      <div class="col-xs-12 form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="email" required>
+                          <label class="mdl-textfield__label" for="sample3">Courriel*</label>
+                      </div>
+                      <div class="col-xs-12 form-group mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <textarea class="mdl-textfield__input" type="text" rows="3"></textarea>
+                          <label class="mdl-textfield__label" for="sample3">Message</label>
+                      </div>
+                      <button onclick="location.href='#'" id="submit-button-contact" aria-label="bacome a business partner" aria-labelledby="submit-button-b2b">Envoyer</button>
+                  </form>
+              </div>
+              <div class="col-xs-12 social">
+                <button onclick="location.href='http://www.facebook.com/canbudz'" type="button" name="Facebook button"><i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i></button>
+                <button onclick="location.href='http://www.twitter.com/canbudz'" type="button" name="Twitter button"><i class="fa fa-twitter-square fa-5x" aria-hidden="true"></i></button>
+                <button onclick="location.href='http://www.instagram.com/canbudz'" type="button" name="Instagram button"><i class="fa fa-instagram fa-5x" aria-hidden="true"></i></button>
+              </div>
+          </div>
+      </article>
 
     </div>
 
@@ -286,8 +312,8 @@
                         $sticky.removeClass('fixed');
                     }
                 });
-                // Navigation bar
-                // =========================
+                /*Navigation bar
+                  ========================*/
                 $('a[href*="#"]:not([href="#"])').click(function() {
                     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                         var target = $(this.hash);
@@ -314,8 +340,8 @@
                 }, false);
             });
         });
-        // scroll to anchor
-        // ========================
+        /*scroll to anchor
+        ======================== */
         $('.scroll-to-anchor').click(function(e) {
             var target = this.hash;
             var $target = $(target);
@@ -326,6 +352,21 @@
             }, 900, 'swing');
 
             e.preventDefault();
+        });
+
+        // change social size
+        jQuery(function($) {
+          var facebook = $(".fa-facebook-square");
+          var twitter = $(".fa-twitter-square");
+          var instagram = $(".fa-instagram");
+          var social = [facebook, twitter, instagram];
+          if ($(window).width() < 768) {
+            for (var i = 0; i < social.length; i++) {
+              var socialCon = $(social[i]);
+              socialCon.removeClass('fa-5x');
+              socialCon.addClass('fa-4x');
+            }
+          }
         });
     </script>
 </body>

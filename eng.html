@@ -226,19 +226,17 @@
                   </form>
               </div>
               <div class="col-xs-12 social">
-                <button onclick="location.href='http://www.facebook.com'" type="button" name="Facebook button"><i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i></button>
-                <button onclick="location.href='http://www.twitter.com'" type="button" name="Twitter button"><i class="fa fa-twitter-square fa-5x" aria-hidden="true"></i></button>
-                <button onclick="location.href='http://www.instagram.com'" type="button" name="Instagram button"><i class="fa fa-instagram fa-5x" aria-hidden="true"></i></button>
+                <button onclick="location.href='http://www.facebook.com/canbudz'" type="button" name="Facebook button"><i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i></button>
+                <button onclick="location.href='http://www.twitter.com/canbudz'" type="button" name="Twitter button"><i class="fa fa-twitter-square fa-5x" aria-hidden="true"></i></button>
+                <button onclick="location.href='http://www.instagram.com/canbudz'" type="button" name="Instagram button"><i class="fa fa-instagram fa-5x" aria-hidden="true"></i></button>
               </div>
           </div>
       </article>
-
-    </div>
+  </div>
 
     <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
     <script src="./js/bootstrap.min.js" charset="utf-8"></script>
     <script src="./js/material.min.js" charset="utf-8"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script type="text/javascript">
         // sticky nav bar on scroll
         jQuery(function($) {
@@ -253,8 +251,9 @@
                         $sticky.removeClass('fixed');
                     }
                 });
-                // Navigation bar
-                // =========================
+
+                /*Navigation bar
+                  ========================*/
                 $('a[href*="#"]:not([href="#"])').click(function() {
                     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                         var target = $(this.hash);
@@ -281,8 +280,9 @@
                 }, false);
             });
         });
-        // scroll to anchor
-        // ========================
+
+        /*scroll to anchor
+        ======================== */
         $('.scroll-to-anchor').click(function(e) {
             var target = this.hash;
             var $target = $(target);
@@ -293,6 +293,21 @@
             }, 900, 'swing');
 
             e.preventDefault();
+        });
+
+        // change social size
+        jQuery(function($) {
+          var facebook = $(".fa-facebook-square");
+          var twitter = $(".fa-twitter-square");
+          var instagram = $(".fa-instagram");
+          var social = [facebook, twitter, instagram];
+          if ($(window).width() < 768) {
+            for (var i = 0; i < social.length; i++) {
+              var socialCon = $(social[i]);
+              socialCon.removeClass('fa-5x');
+              socialCon.addClass('fa-4x');
+            }
+          }
         });
     </script>
 </body>
