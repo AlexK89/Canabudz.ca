@@ -321,22 +321,20 @@ form button:hover {
     transition: 0.4s;
     margin-top: 20px;
 }
-
-.forum-buttons button:disabled {
-    background: #7a9178;
-    cursor: not-allowed;
-}
-
-.forum-buttons button:disabled:hover {
-    background: #7a9178;
-}
-
 .forum-buttons button:hover {
     background-color: #fff;
     border: 1px solid #3a8c30;
     color: #3a8c30;
 }
+button:disabled {
+    background: #7a9178;
+    cursor: not-allowed;
+}
 
+button:disabled:hover {
+    background: #7a9178;
+    color: #fff;
+}
 
 /*Growers & B2B
 ===============================*/
@@ -456,11 +454,15 @@ border-bottom: 1px solid rgba(255,255,255,.7);
     border: 1px solid #fff;
     color: #fff;
 }
+.footer form button:disabled:hover {
+    background-color: #fff;
+    color: #3a8c30;
+}
 .social {
   text-align: center;
   margin-bottom: 40px;
 }
-.footer button {
+.social button {
   color: #fff;
   padding: 0;
   background: none;
